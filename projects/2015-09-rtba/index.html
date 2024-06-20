@@ -1,0 +1,395 @@
+<!doctype html>
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Real-time Bayesian Aggregation - Anthony Wertz</title>
+<meta name="description" content="Real-time detection of low SNR radionuclide threats.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Anthony Wertz">
+<meta property="og:title" content="Real-time Bayesian Aggregation">
+<meta property="og:url" content="https://me.anthonywertz.com/projects/2015-09-rtba/">
+
+
+  <meta property="og:description" content="Real-time detection of low SNR radionuclide threats.">
+
+
+
+  <meta property="og:image" content="https://me.anthonywertz.com/assets/projects/prj_rtba.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-06-20T15:07:49-04:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://me.anthonywertz.com/projects/2015-09-rtba/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Anthony Wertz Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    
+
+<link rel="stylesheet" href="/assets/css/bib.css">
+
+
+<link rel="stylesheet" href="/assets/css/tweaks.css" />
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Anthony Wertz
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/"
+                
+                
+              >About me</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/activities/"
+                
+                
+              >Activities</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/projects/"
+                
+                
+              >Projects</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/cv/"
+                
+                
+              >CV</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="/assets/projects/prj_rtba.png"
+             alt="">
+      
+      <h3>Role</h3>
+      <p>Research software developer</p>
+
+      
+    
+      
+      <h3>Responsibilities</h3>
+      <p>Reimplement and optimize research code for real-time deployment in C++ and Java.</p>
+
+      
+    
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Real-time Bayesian Aggregation">
+    <meta itemprop="description" content="Real-time detection of low SNR radionuclide threats.">
+    <meta itemprop="datePublished" content="2024-06-20T15:07:49-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://me.anthonywertz.com/projects/2015-09-rtba/" itemprop="url">Real-time Bayesian Aggregation
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Nuclear threat detection is a complicated and difficult task.
+There are numerous challenges to be overcome in the process:
+radioactive material sourced for nefarious purposes will likely be shielded to prevent detection, yielding a very weakly detectable signal easily drowned out by background radiation from anything from buildings, concrete, to bananas;
+transport routes, especially past the national border, are largely unknown and would likely be chosen to minimize exposure to avoid detection;
+and the placement and movement of sensors will largely dictate how effective a detection framework will be.
+See what you can make of these figures, then keep reading for some more details!</p>
+
+<figure>
+<div class="project-gallery half ">
+  
+  <div>
+    
+      <a href="/assets/projects/ss_rtba_path.png">
+          <img src="/assets/projects/ss_rtba_path.png" alt="Figure 1: Heatmaps with and without source injection." />
+      </a>
+    
+    
+      <p>Figure 1: Heatmaps with and without source injection.
+</p>
+    
+    </div>
+  
+  <div>
+    
+      <a href="/assets/projects/ss_rtba.png">
+          <img src="/assets/projects/ss_rtba.png" alt="Figure 2: Localization precision with and without background estimation." />
+      </a>
+    
+    
+      <p>Figure 2: Localization precision with and without background estimation.
+</p>
+    
+    </div>
+  
+</div>
+</figure>
+
+<p>I had the privilege of working with and learning from excellent researchers, especially <a href="https://scholar.google.com/citations?hl=en&amp;user=nQaxVCsAAAAJ">Dr. Prateek Tandon</a>, in the <a href="autonlab.org">Auton Lab</a> at Carnegie Mellon University on how to overcome the challenge of low signal-to-noise (SNR) ratios, especially when you have some prior knowledge of the sources of interest and the expected background.
+A very powerful framework developed by the lab, and an excellent research thesis <a class="citation" href="#Tandon2018">(Tandon, 2018)</a>, is called Bayesian aggregation.</p>
+
+<p>At a high level, the procedure is very simple: you collect samples in real-time, and update a probability map indicating the likelihood of a source present.
+Candidate hypotheses are incrementally updated by aggregating evidence of a source at any particular location given the current observation.
+Much of the magic of the process comes from the processes of filtering, background subtraction, and the Bayesian update itself.
+Using this approach, even very small signals can be localized with high precision.
+In figure 1 you can see BA in action, comparing the same trajectory with and without source injection.
+Without source injection, there’s no obvious evidence of a threat (note the heat map is showing log probabilities of a source detection, so very low values).
+With source injection, the entire map gets dark except for a high-probability bright spot at the point of the injected source.
+In figure 2 you can see how a model of the background radiation can be incorporated to increase the SNR and improve localization precision.</p>
+
+<p>As one of my first roles in the lab, I used my background in real-time software development to design and implements C/C++ and Java modules employing the BA and filtering algorithms developed in-house for deployment.
+It was a very exciting learning experience and I was very happy to play a role in this endeavor.</p>
+
+<p>If you want to learn more about this method, I highly recommend checking out Prateek’s thesis <a class="citation" href="#Tandon2018">(Tandon, 2018)</a> along with some additional <a href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C39&amp;q=artur+dubrawski+bayesian+aggregation&amp;btnG=">works on BA out of the Auton Lab</a>.</p>
+
+<ol class="bibliography"><li><div class="text-justify">
+    <span id="Tandon2018">Tandon, P. (2018). <i>Bayesian Aggregation of Evidence for Detection and Characterization of Patterns in Multiple Noisy Observations</i>. https://doi.org/10.1184/R1/6714947.v1</span>
+</div>
+<button class="button bibtex" onclick="toggleBibtexTandon2018()">Bibtex</button>
+
+
+<a href="http://doi.org/10.1184/R1/6714947.v1" target="_blank"><input class="button doi" type="button" value="doi" /></a>
+
+
+
+<a href="https://kilthub.cmu.edu/articles/thesis/Bayesian_Aggregation_of_Evidence_for_Detection_and_Characterization_of_Patterns_in_Multiple_Noisy_Observations/6714947" target="_blank"><input class="button link" type="button" value="link" /></a>
+
+
+
+
+
+
+
+
+
+<div id="aTandon2018" style="display: none;">
+    <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">Tandon2018</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Tandon, Prateek}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{{Bayesian Aggregation of Evidence for Detection and Characterization of Patterns in Multiple Noisy Observations}}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2018}</span><span class="p">,</span>
+  <span class="na">month</span> <span class="p">=</span> <span class="nv">jun</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://kilthub.cmu.edu/articles/thesis/Bayesian_Aggregation_of_Evidence_for_Detection_and_Characterization_of_Patterns_in_Multiple_Noisy_Observations/6714947}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1184/R1/6714947.v1}</span>
+<span class="p">}</span></code></pre></figure>
+</div>
+<script>
+    function toggleBibtexTandon2018 (parameter) {
+        var x = document.getElementById('aTandon2018');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+</script></li></ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-20T15:07:49-04:00">20 June 2024</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Real-time+Bayesian+Aggregation%20https%3A%2F%2Fme.anthonywertz.com%2Fprojects%2F2015-09-rtba%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fme.anthonywertz.com%2Fprojects%2F2015-09-rtba%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://me.anthonywertz.com/projects/2015-09-rtba/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/projects/2017-01-mcba/" class="pagination--pager" title="Microcirculatory Bloodflow Analysis
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    <li><a href="mailto:me@mail.anthonywertz.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square"
+          aria-hidden="true"></i> Email</a></li>
+    
+    
+    
+    <li><a href="https://me.anthonywertz.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link"
+          aria-hidden="true"></i> Website</a></li>
+    
+    
+    
+    <li><a href="https://github.com/anthonytw" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+          aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="https://linkedin.com/in/anthonytw" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin"
+          aria-hidden="true"></i> LinkedIn</a></li>
+    
+    
+    
+
+    
+    <li><a
+        href="/feed.xml"><i
+          class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a
+    href="https://me.anthonywertz.com">Anthony Wertz</a>.</div>
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

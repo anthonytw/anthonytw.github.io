@@ -1,0 +1,50 @@
+.button {
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    font-weight: bold;
+    margin: 2px 1px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+ol.bibliography div.text-justify {
+    text-align: left;
+}
+
+ol.bibliography {
+    list-style-type: disc;
+    /* padding: 0px; */
+    /* margin: 0px; */
+}
+
+
+.preprint {
+    background-color: #610be2;
+}
+
+.bibtex {
+    background-color: #4CAF50;
+}
+
+.doi {
+    background-color: #66ccff;
+}
+
+.link {
+    background-color: #ff9966;
+}
+
+.slides {
+    background-color: #cc6699;
+}
+
+.press {
+    background-color: #ffff00;
+    color: #000000;
+    border: solid 1px #000000;
+}

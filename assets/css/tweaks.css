@@ -1,0 +1,132 @@
+@import "/assets/css/github.css";
+
+figure.highlight {
+    background: none;
+    border: solid 1px #000;
+}
+
+figure.highlight pre {
+    font-size: 0.8em;
+}
+
+div.project-gallery {
+    padding: 0 0;
+    margin: 0 0;
+
+    div {
+        text-align: center;
+    }
+
+    &.half div {
+        float: left;
+        width: 49%;
+        padding-right: 10px;
+    }
+
+    &.third div {
+        float: left;
+        width: 33%;
+        padding-right: 10px;
+    }
+
+    p {
+        font-size: 0.7em;
+    }
+}
+
+button.clipboard-copy-button {
+    color: #000;
+
+    &:hover {
+        color: red;
+    }
+}
+
+@media (min-width: 64em) {
+    .sidebar.sticky {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        max-height: 100%;
+
+        border-right: solid 1px #000;
+
+        padding: 2rem 1rem;
+        padding-top: 4rem;
+
+        background-image: url("/assets/images/labphoto_me.png");
+        background-position: center bottom;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+    }
+}
+
+.sidebar {
+    opacity: 1;
+}
+
+.masthead__inner-wrap {
+    padding: 0;
+    margin: 1em 0;
+    max-width: 100%;
+}
+
+.masthead__menu {
+    border-top: solid 1px #000;
+    border-bottom: solid 1px #000;
+    padding: 0 2em;
+}
+
+.page__footer {
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+
+.page__footer footer {
+    padding: 0.5em;
+    margin: 0;
+    text-align: center;
+}
+
+div.education {
+    /* display: flex; */
+    /* align-items: center; */
+    /* height: 175px; */
+    padding: 1em;
+}
+
+div.education img {
+    width: 20em;
+    /* margin-right: 25px; */
+}
+
+table.projects {
+    width: 100%;
+}
+
+table.projects tr td {
+    padding: 1em 2em;
+    font-size: 0.8em;
+    text-align: center;
+    vertical-align: top;
+    width: 33%;
+}
+
+table.projects tr td div.bigheader {
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+table.projects tr td div.header {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+table.projects tr td img {
+    border: solid 2px black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

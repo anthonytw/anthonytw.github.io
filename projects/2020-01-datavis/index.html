@@ -1,0 +1,495 @@
+<!doctype html>
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Data and Anomaly Visualization - Anthony Wertz</title>
+<meta name="description" content="Tool development for real-time and post-hoc data visualization and analytics.">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Anthony Wertz">
+<meta property="og:title" content="Data and Anomaly Visualization">
+<meta property="og:url" content="https://me.anthonywertz.com/projects/2020-01-datavis/">
+
+
+  <meta property="og:description" content="Tool development for real-time and post-hoc data visualization and analytics.">
+
+
+
+  <meta property="og:image" content="https://me.anthonywertz.com/assets/projects/ss_treeview_mouse.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-06-20T15:07:49-04:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://me.anthonywertz.com/projects/2020-01-datavis/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Anthony Wertz Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    
+
+<link rel="stylesheet" href="/assets/css/bib.css">
+
+
+<link rel="stylesheet" href="/assets/css/tweaks.css" />
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Anthony Wertz
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/"
+                
+                
+              >About me</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/activities/"
+                
+                
+              >Activities</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/projects/"
+                
+                
+              >Projects</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/cv/"
+                
+                
+              >CV</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="/assets/projects/ss_treeview_mouse.png"
+             alt="">
+      
+      <h3>Role</h3>
+      <p>Research Analyst and Developer</p>
+
+      
+    
+      
+      <h3>Responsibilities</h3>
+      <p>Build tools for data visualization and analytics.</p>
+
+      
+    
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Data and Anomaly Visualization">
+    <meta itemprop="description" content="Tool development for real-time and post-hoc data visualization and analytics.">
+    <meta itemprop="datePublished" content="2024-06-20T15:07:49-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://me.anthonywertz.com/projects/2020-01-datavis/" itemprop="url">Data and Anomaly Visualization
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Data, especially when there are large amounts of it, can quickly become unruly and difficult to understand.
+To this end, I have developed and collaborated on numerous data processing tools to make this task somewhat more tenable.
+This work spans my roles as analyst in the <a href="https://autonlab.org">Auton Lab</a>, doctoral student in the <a href="http://sml.me.cmu.edu/">Soft Machines Lab</a>, and research intern at <a href="https://arieca.com">Arieca</a>.
+The gallery shows three examples, and we’ll discuss a few others below.</p>
+
+<figure>
+<div class="project-gallery third ">
+  
+  <div>
+    
+      <a href="/assets/projects/ss_auviewer.png">
+          <img src="/assets/projects/ss_auviewer.png" alt="Figure 1: auviewer, a real-time medical data viewing and analysis tool." />
+      </a>
+    
+    
+      <p>Figure 1: auviewer, a real-time medical data viewing and analysis tool.
+</p>
+    
+    </div>
+  
+  <div>
+    
+      <a href="/assets/projects/ss_mcba.png">
+          <img src="/assets/projects/ss_mcba.png" alt="Figure 2: MCBA, a post-hoc microcirculation video processing, visualization, and analytics tool." />
+      </a>
+    
+    
+      <p>Figure 2: MCBA, a post-hoc microcirculation video processing, visualization, and analytics tool.
+</p>
+    
+    </div>
+  
+  <div>
+    
+      <a href="/assets/projects/ss_treeview_mouse.png">
+          <img src="/assets/projects/ss_treeview_mouse.png" alt="Figure 3: TreeView, a tool for analyzing decision trees and the data used to learn them." />
+      </a>
+    
+    
+      <p>Figure 3: TreeView, a tool for analyzing decision trees and the data used to learn them.
+</p>
+    
+    </div>
+  
+</div>
+</figure>
+
+<p>I had the privilege of collaborating with many people on these projects, which span over ten years of research.
+The development of these various tools was largely ancillary to the overarching goals of our work, but many have turned out to be quite useful, and some of them I am able to share.</p>
+
+<p>Figure 1 in the gallery is <a href="https://auviewer.readthedocs.io"><code class="language-plaintext highlighter-rouge">auviewer</code></a>, an abbreviation of “Auton [Lab] Universal Viewer”.
+It is an open-source biomedical data viewer, annotator, and analytics tool I helped develop for analyzing anomaly detection and other algorithms on large amounts of patient data.
+I contributed much more heavily to its underlying data source, <a href="https://audata.readthedocs.io"><code class="language-plaintext highlighter-rouge">audata</code></a>, which is an abstraction on top of HDF5 for dealing with large medical time series efficiently.
+One relevant research outcome this was folded into is that on common data formats and tools in medicine <a class="citation" href="#laird2021critical">(Laird et al., 2021)</a>.</p>
+
+<p>Figure 2 shows a tool I helped develop to view videos of microcirculation which went through a video processing pipeline to extract information about bloodflow.
+You can find more information about that on the <a href="/projects/2017-01-mcba">MCBA project page</a> or check out the related research <a class="citation" href="#ChaoLiu2015">(Liu et al., 2015)</a>.</p>
+
+<p>Figure 3 shows a tool I developed to process decision trees in random forest classifiers and use them to analyze both the data they were trained on as well as testing data.
+This was incredibly helpful in debugging bad features or understanding why a classifier did or did not work, and the tool found much use on various projects.</p>
+
+<p>After the Auton Lab, I continued building tools to help out with various other projects.
+One example of this is a tool, <a href="https://github.com/TEGSense/ppgview">PPGView</a>, developed as part of the <a href="/projects/2024-10-tegsense">TEGSense project</a>, to assist in our research on battery-free operation of wearable sensors by harvesting energy from body heat thermoelectric generators <a class="citation" href="#zadan2024tegsense">(Zadan et al., accepted, expected 2024)</a>.
+The tool allows for real-time data collection via Bluetooth low-energy (BLE) of a battery-free wearable I designed.
+It also supports device commands and configuration of the MAX30101 photoplethysmograph sensor.
+More details are on the project page, and the hardware and software are completely open-sourced.</p>
+
+<p><img src="/assets/projects/ss_tegsense.jpg" alt="TEGSense PPGView tool." /></p>
+
+<p>A similar tool was developed at Arieca for real-time data capture and control of custom test hardware I developed for characterization of material degradation due to ion migration.
+More details can be found on the <a href="/projects/2024-05-ionm">Ion Migration project page</a>.</p>
+
+<p><img src="/assets/projects/ss_ionm.png" alt="IonM tool." /></p>
+
+<p>Developing tools to assist the research workflow has been very fun and rewarding.
+I am happy there are at least a few projects I am able to open and share here.
+Tip: I have grown very fond of <a href="https://bokeh.org">bokeh</a> for real-time visualization tools, I highly recommend checking it out.</p>
+
+<ol class="bibliography"><li><div class="text-justify">
+    <span id="laird2021critical">Laird, P., <b>Wertz, A.</b>, Welter, G., Maslove, D., Hamilton, A., Yoon, J. H., Lake, D. E., Zimmet, A. E., Bobko, R., Moorman, J. R., &amp; others. (2021). The critical care data exchange format: a proposed flexible data standard for combining clinical and high-frequency physiologic data in critical care. <i>Physiological Measurement</i>. https://doi.org/10.1088/1361-6579/abfc9b</span>
+</div>
+<button class="button bibtex" onclick="toggleBibtexlaird2021critical()">Bibtex</button>
+
+
+<a href="http://doi.org/10.1088/1361-6579/abfc9b" target="_blank"><input class="button doi" type="button" value="doi" /></a>
+
+
+
+
+
+
+
+
+
+
+
+<div id="alaird2021critical" style="display: none;">
+    <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">laird2021critical</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{The critical care data exchange format: a proposed flexible data standard for combining clinical and high-frequency physiologic data in critical care}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Laird, Philip and Wertz, Anthony and Welter, Gus and Maslove, David and Hamilton, Alexander and Yoon, Joo Heung and Lake, Douglas E and Zimmet, Amanda E and Bobko, Ryan and Moorman, J Randall and others}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Physiological Measurement}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2021}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{IOP Publishing}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1088/1361-6579/abfc9b}</span>
+<span class="p">}</span></code></pre></figure>
+</div>
+<script>
+    function toggleBibtexlaird2021critical (parameter) {
+        var x = document.getElementById('alaird2021critical');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+</script></li>
+<li><div class="text-justify">
+    <span id="ChaoLiu2015">Liu, C., Gomez, H., Narasimhan, S., Dubrawski, A., Pinsky, M. R., &amp; Zuckerbraun, B. (2015). Real-time visual analysis of microvascular blood flow for critical care. <i>2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2217–2225. https://doi.org/10.1109/CVPR.2015.7298834</span>
+</div>
+<button class="button bibtex" onclick="toggleBibtexChaoLiu2015()">Bibtex</button>
+
+
+<a href="http://doi.org/10.1109/CVPR.2015.7298834" target="_blank"><input class="button doi" type="button" value="doi" /></a>
+
+
+
+<a href="https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Liu_Real-Time_Visual_Analysis_2015_CVPR_paper.html" target="_blank"><input class="button link" type="button" value="link" /></a>
+
+
+
+
+
+
+
+
+
+<div id="aChaoLiu2015" style="display: none;">
+    <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">ChaoLiu2015</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Liu, Chao and Gomez, Hernando and Narasimhan, Srinivasa and Dubrawski, Artur and Pinsky, Michael R. and Zuckerbraun, Brian}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR)}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Real-time visual analysis of microvascular blood flow for critical care}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2015}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+  <span class="na">number</span> <span class="p">=</span> <span class="s">{}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{2217-2225}</span><span class="p">,</span>
+  <span class="na">keywords</span> <span class="p">=</span> <span class="s">{Videos;Blood;Skeleton;Imaging;Heart beat;Noise;Hemorrhaging}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1109/CVPR.2015.7298834}</span><span class="p">,</span>
+  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://www.cv-foundation.org/openaccess/content_cvpr_2015/html/Liu_Real-Time_Visual_Analysis_2015_CVPR_paper.html}</span>
+<span class="p">}</span></code></pre></figure>
+</div>
+<script>
+    function toggleBibtexChaoLiu2015 (parameter) {
+        var x = document.getElementById('aChaoLiu2015');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+</script></li>
+<li><div class="text-justify">
+    <span id="zadan2024tegsense">Zadan, M., <b>Wertz, A.</b>, Shah, D., Patel, D. K., Zu, W., Han, Y., Gelorme, J., Mea, H. J., Yao, L., Malakooti, M. H., Ko, S. H., Kazem, N., &amp; Majidi, C. (accepted, expected 2024). <i>Stretchable Thermoelectric Generators for Self-Powered Wearable Health Monitoring</i>.</span>
+</div>
+<button class="button bibtex" onclick="toggleBibtexzadan2024tegsense()">Bibtex</button>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="azadan2024tegsense" style="display: none;">
+    <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">zadan2024tegsense</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Stretchable Thermoelectric Generators for Self-Powered Wearable Health Monitoring}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Zadan, Mason and Wertz, Anthony and Shah, Dylan and Patel, Dinesh K. and Zu, Wuzhou and Han, Youngshang and Gelorme, Jeff and Mea, Hing Jii and Yao, Lining and Malakooti, Mohammad H. and Ko, Seung Hwan and Kazem, Navid and Majidi, Carmel}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{accepted, expected 2024}</span><span class="p">,</span>
+  <span class="na">month</span> <span class="p">=</span> <span class="nv">jun</span>
+<span class="p">}</span></code></pre></figure>
+</div>
+<script>
+    function toggleBibtexzadan2024tegsense (parameter) {
+        var x = document.getElementById('azadan2024tegsense');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+</script></li></ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-20T15:07:49-04:00">20 June 2024</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Data+and+Anomaly+Visualization%20https%3A%2F%2Fme.anthonywertz.com%2Fprojects%2F2020-01-datavis%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fme.anthonywertz.com%2Fprojects%2F2020-01-datavis%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://me.anthonywertz.com/projects/2020-01-datavis/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/projects/2019-08-riss-cabg/" class="pagination--pager" title="Prediction of Postoperative Renal Failure after CABG Surgery
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    <li><a href="mailto:me@mail.anthonywertz.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square"
+          aria-hidden="true"></i> Email</a></li>
+    
+    
+    
+    <li><a href="https://me.anthonywertz.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link"
+          aria-hidden="true"></i> Website</a></li>
+    
+    
+    
+    <li><a href="https://github.com/anthonytw" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+          aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="https://linkedin.com/in/anthonytw" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin"
+          aria-hidden="true"></i> LinkedIn</a></li>
+    
+    
+    
+
+    
+    <li><a
+        href="/feed.xml"><i
+          class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a
+    href="https://me.anthonywertz.com">Anthony Wertz</a>.</div>
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
