@@ -34,6 +34,31 @@ div.project-gallery {
     }
 }
 
+div.photo-gallery {
+    padding: 0 0;
+    margin: 0 0;
+
+    div {
+        text-align: center;
+    }
+
+    div {
+        float: left;
+        width: 33%;
+        padding: 3px;
+    }
+
+    img {
+        width: 100%
+    }
+}
+
+.photo-gallery::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
 button.clipboard-copy-button {
     color: #000;
 
@@ -55,10 +80,10 @@ button.clipboard-copy-button {
         padding: 2rem 1rem;
         padding-top: 4rem;
 
-        background-image: url("/assets/images/labphoto_me.png");
+        /* background-image: url("/assets/images/labphoto_me.png");
         background-position: center bottom;
         background-size: 100% auto;
-        background-repeat: no-repeat;
+        background-repeat: no-repeat; */
     }
 }
 
