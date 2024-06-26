@@ -1,0 +1,523 @@
+<!doctype html>
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Soft manipulator control - A bit about Anthony</title>
+<meta name="description" content="Soft manipulator modeling, calibration and open-loop trajectory optimization.">
+
+
+  <meta name="author" content="Anthony Wertz">
+  
+  <meta property="article:author" content="Anthony Wertz">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="A bit about Anthony">
+<meta property="og:title" content="Soft manipulator control">
+<meta property="og:url" content="https://me.anthonywertz.com/projects/2022-10-horton/">
+
+
+  <meta property="og:description" content="Soft manipulator modeling, calibration and open-loop trajectory optimization.">
+
+
+
+  <meta property="og:image" content="https://me.anthonywertz.com/assets/projects/prj_trajopt.gif">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-06-26T17:30:40-04:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://me.anthonywertz.com/projects/2022-10-horton/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="A bit about Anthony Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    
+
+<link rel="stylesheet" href="/assets/css/bib.css">
+
+
+<link rel="stylesheet" href="/assets/css/tweaks.css" />
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          A bit about Anthony
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/"
+                
+                
+              >About me</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/activities/"
+                
+                
+              >Activities</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/projects/"
+                
+                
+              >Projects</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/cv/"
+                
+                
+              >CV</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="/assets/projects/prj_trajopt.gif"
+             alt="">
+      
+      <h3>Role</h3>
+      <p>Researcher</p>
+
+      
+    
+      
+      <h3>Responsibilities</h3>
+      <p>Offline modeling, simulation, and control design; real-time control and hardware.</p>
+
+      
+    
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Soft manipulator control">
+    <meta itemprop="description" content="Soft manipulator modeling, calibration and open-loop trajectory optimization.">
+    <meta itemprop="datePublished" content="2024-06-26T17:30:40-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://me.anthonywertz.com/projects/2022-10-horton/" itemprop="url">Soft manipulator control
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Soft robotics in an exciting field of research focused on the design and application of robotic devices that rely heavily on soft materials for their novel functionality.
+This field presents several challenges:</p>
+
+<ul>
+  <li>Complicated dynamics: Soft devices exhibit significant non-linear dynamics, hysteretic behavior, and time-dependent material property changes, making them more complicated to model than their rigid counterparts.</li>
+  <li>Difficult kinematics: Their capacity for significant deformation throughout their bulk, along with limited physical constraints, makes inferring kinematics from available sensing modalities challenging.</li>
+  <li>Challenging actuation: The complicated dynamics and sensing, along less precise actuators typically used, make precise control difficult.</li>
+</ul>
+
+<p>Hysteresis is particularly problematic.
+For instance, a viscoelastic polymer’s stress-strain response differs during the strain phase versus relaxation, resulting in a both non-linear and directionally-dependent stress-strain relationship.
+This work explores these challenges by evaluating a simplified example of such a system: a single, planar, continuum manipulator.</p>
+
+<figure>
+<div class="project-gallery third ">
+  
+  <div>
+    
+      <a href="/assets/projects/trajopt_block.gif">
+          <img src="/assets/projects/trajopt_block.gif" alt="Figure 1: Block diagram of the manipulator design." />
+      </a>
+    
+    
+      <p>Figure 1: Block diagram of the manipulator design.
+</p>
+    
+    </div>
+  
+  <div>
+    
+      <a href="/assets/projects/trajopt_validation.gif">
+          <img src="/assets/projects/trajopt_validation.gif" alt="Figure 2: Open-loop control validation in simulation and hardware." />
+      </a>
+    
+    
+      <p>Figure 2: Open-loop control validation in simulation and hardware.
+</p>
+    
+    </div>
+  
+  <div>
+    
+      <a href="/assets/projects/trajopt_video.mp4">
+          <img src="/assets/projects/prj_trajopt.gif" alt="Figure 3: Published project video." />
+      </a>
+    
+    
+      <p>Figure 3: Published project video.
+</p>
+    
+    </div>
+  
+</div>
+</figure>
+
+<p>I had the great pleasure of collaborating with <a href="https://sites.google.com/site/apsabelhaus/">Dr. Andrew Sabelhaus</a> where I investigated more sophisticated models and model-based control methods for his Horton robot.
+We tackled several key issues on this project including:</p>
+
+<ol>
+  <li>kinematics,</li>
+  <li>dynamics modeling,</li>
+  <li>model calibration,</li>
+  <li>open-loop control, and</li>
+  <li>the sim-to-real gap.</li>
+</ol>
+
+<p>Previously, limb motions were laboriously developed by manually tweaking actuator commands until something close to the desired result was attained.</p>
+
+<p>We first looked at representing the manipulator dynamics by modeling it as a discrete, rigid, serial-chain actuator.
+This takes advantage of the minimal axial strain undergone by the limb by posing constraints that help simplify the dynamics and kinematics.
+It also allowed the use of standard approachs used in rigid systems.</p>
+
+<p>Then we looked at modeling the dynamics of the shape-memory alloy (SMA) antagonistic actuator pair.
+SMA is a rigid metal alloy whose crystalline structure can be reversibly modulated by temperature, providing a means of transducing heat to an axial stress.
+This required two models: on to model the thermodynamic balance between Joule heating and convective cooling; and the other mapping the SMA temperature to an axial stress.
+This was a challenge as SMA dynamics are complicated and include parameters nearly impossibly to sense non-destructively, so simplifications had to be made.</p>
+
+<p>Once models were developed, we used the physical hardware to calibrate the model parameters.
+For accurate calibration, we devised a number of scenarios to isolate the individual parameters to fit them with minimal data collection.
+A dynamics simulator was built to roll out the calibrated model dynamics given an initial state and a control trajectory.
+This simulation was used in a standard non-linear optimization to design open-loop controls to closely track a user-designed trajectory while satisfying the dynamic constraints.
+Finally, the process was validated by tracking the designed controls in hardware using a linear quadratic regulator (LQR).
+You can see an example of our tracking performance in figure 2 which shows the target, simulated, and hardware trajectories.</p>
+
+<p>We extended the work by adding in a “teach-and-repeat” component, where an operator would move the limb along a desired trajectory captured by the device sensors during the “teach” phase.
+The optimal open-loop controls were again learned to actuate the limb to track the desired trajectory.
+We validated the procedure in the hardware “repeat” phase, demonstrating a basic form of human-robot cooporation and training.
+This and other aspects of the work are summarized in the video published along with the article, linked to in figure 3.</p>
+
+<p>Read more about this work in our RoboSoft article <a class="citation" href="#wertz2022trajectory">(Wertz et al., 2022)</a>.
+In parallel, we evaluated the use of completely model-free inference, the work of Drew and Rohan Mehta <a class="citation" href="#sabelhaus2022situ">(Sabelhaus et al., 2022)</a> where we showed much of the inference can be learned directly without requiring an accurate model of the dynamics.
+The work also contributed to future studies in safe supervision necessary to execute controls while protecting the SMA coils from overheating <a class="citation" href="#sabelhaus2024safe">(Sabelhaus et al., 2024)</a>, which can cause the SMA to re-train its permanent shape, losing its ability actuate effectively.</p>
+
+<ol class="bibliography"><li><div class="text-justify">
+    <span id="wertz2022trajectory"><b>Wertz, A.</b>, Sabelhaus, A. P., &amp; Majidi, C. (2022). Trajectory Optimization for Thermally-Actuated Soft Planar Robot Limbs. <i>2022 IEEE 5th International Conference on Soft Robotics (RoboSoft)</i>, 439–446. https://doi.org/10.1109/RoboSoft54090.2022.9762226</span>
+</div>
+<button class="button bibtex" onclick="toggleBibtexwertz2022trajectory()">Bibtex</button>
+
+
+<a href="http://doi.org/10.1109/RoboSoft54090.2022.9762226" target="_blank"><input class="button doi" type="button" value="doi" /></a>
+
+
+
+
+
+<a href="https://arxiv.org/abs/2110.09474" target="_blank"><input class="button preprint" type="button" value="preprint" /></a>
+
+
+
+
+
+
+
+<a href="/assets/presentations/2022_Wertz_RoboSoft.pdf" target="_blank"><input class="button slides" type="button" value="slides" /></a>
+
+<div id="awertz2022trajectory" style="display: none;">
+    <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">wertz2022trajectory</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Trajectory Optimization for Thermally-Actuated Soft Planar Robot Limbs}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Wertz, Anthony and Sabelhaus, Andrew P and Majidi, Carmel}</span><span class="p">,</span>
+  <span class="na">booktitle</span> <span class="p">=</span> <span class="s">{2022 IEEE 5th International Conference on Soft Robotics (RoboSoft)}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{439--446}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
+  <span class="na">organization</span> <span class="p">=</span> <span class="s">{IEEE}</span><span class="p">,</span>
+  <span class="na">preprint</span> <span class="p">=</span> <span class="s">{https://arxiv.org/abs/2110.09474}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1109/RoboSoft54090.2022.9762226}</span><span class="p">,</span>
+  <span class="na">slides</span> <span class="p">=</span> <span class="s">{/assets/presentations/2022_Wertz_RoboSoft.pdf}</span>
+<span class="p">}</span></code></pre></figure>
+</div>
+<script>
+    function toggleBibtexwertz2022trajectory (parameter) {
+        var x = document.getElementById('awertz2022trajectory');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+</script></li>
+<li><div class="text-justify">
+    <span id="sabelhaus2022situ">Sabelhaus, A. P., Mehta, R. K., <b><b>Wertz, A.</b> T.</b>, &amp; Majidi, C. (2022). In-Situ Sensing and Dynamics Predictions for Electrothermally-Actuated Soft Robot Limbs. <i>Frontiers in Robotics and AI</i>, <i>9</i>, 888261. https://doi.org/10.3389/frobt.2022.888261</span>
+</div>
+<button class="button bibtex" onclick="toggleBibtexsabelhaus2022situ()">Bibtex</button>
+
+
+<a href="http://doi.org/10.3389/frobt.2022.888261" target="_blank"><input class="button doi" type="button" value="doi" /></a>
+
+
+
+
+
+
+
+
+
+
+
+<div id="asabelhaus2022situ" style="display: none;">
+    <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">sabelhaus2022situ</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{In-Situ Sensing and Dynamics Predictions for Electrothermally-Actuated Soft Robot Limbs}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Sabelhaus, Andrew P and Mehta, Rohan K and Wertz, Anthony T and Majidi, Carmel}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Frontiers in Robotics and AI}</span><span class="p">,</span>
+  <span class="na">volume</span> <span class="p">=</span> <span class="s">{9}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{888261}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Frontiers}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.3389/frobt.2022.888261}</span>
+<span class="p">}</span></code></pre></figure>
+</div>
+<script>
+    function toggleBibtexsabelhaus2022situ (parameter) {
+        var x = document.getElementById('asabelhaus2022situ');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+</script></li>
+<li><div class="text-justify">
+    <span id="sabelhaus2024safe">Sabelhaus, A. P., Patterson, Z. J., <b><b>Wertz, A.</b> T.</b>, &amp; Majidi, C. (2024). Safe Supervisory Control of Soft Robot Actuators. <i>Soft Robotics</i>. https://doi.org/https://doi.org/10.1089/soro.2022.0131</span>
+</div>
+<button class="button bibtex" onclick="toggleBibtexsabelhaus2024safe()">Bibtex</button>
+
+
+<a href="http://doi.org/https://doi.org/10.1089/soro.2022.0131" target="_blank"><input class="button doi" type="button" value="doi" /></a>
+
+
+
+
+
+
+
+
+
+
+
+<div id="asabelhaus2024safe" style="display: none;">
+    <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">sabelhaus2024safe</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Safe Supervisory Control of Soft Robot Actuators}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Sabelhaus, Andrew P and Patterson, Zach J and Wertz, Anthony T and Majidi, Carmel}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Soft Robotics}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2024}</span><span class="p">,</span>
+  <span class="na">month</span> <span class="p">=</span> <span class="nv">feb</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Mary Ann Liebert, Inc., publishers 140 Huguenot Street, 3rd Floor New~…}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{https://doi.org/10.1089/soro.2022.0131}</span>
+<span class="p">}</span></code></pre></figure>
+</div>
+<script>
+    function toggleBibtexsabelhaus2024safe (parameter) {
+        var x = document.getElementById('asabelhaus2024safe');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+</script></li></ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-26T17:30:40-04:00">26 June 2024</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Soft+manipulator+control%20https%3A%2F%2Fme.anthonywertz.com%2Fprojects%2F2022-10-horton%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fme.anthonywertz.com%2Fprojects%2F2022-10-horton%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://me.anthonywertz.com/projects/2022-10-horton/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/projects/2020-01-tracir/" class="pagination--pager" title="Trauma Care in a Rucksack (TRACIR)
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    <li><a href="mailto:me@mail.anthonywertz.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square"
+          aria-hidden="true"></i> Email</a></li>
+    
+    
+    
+    <li><a href="https://me.anthonywertz.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link"
+          aria-hidden="true"></i> Website</a></li>
+    
+    
+    
+    <li><a href="https://github.com/anthonytw" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+          aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="https://linkedin.com/in/anthonytw" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin"
+          aria-hidden="true"></i> LinkedIn</a></li>
+    
+    
+    
+
+    
+    <li><a
+        href="/feed.xml"><i
+          class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a
+    href="https://me.anthonywertz.com">Anthony Wertz</a>.</div>
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
