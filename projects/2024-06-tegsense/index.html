@@ -1,0 +1,489 @@
+<!doctype html>
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>TEG-powered, battery-free PPG sensing - A bit about Anthony</title>
+<meta name="description" content="Battery-free photoplethysmograph (PPG) powered by body heat captured using flexible thermoelectric generators (TEGs).">
+
+
+  <meta name="author" content="Anthony Wertz">
+  
+  <meta property="article:author" content="Anthony Wertz">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="A bit about Anthony">
+<meta property="og:title" content="TEG-powered, battery-free PPG sensing">
+<meta property="og:url" content="https://me.anthonywertz.com/projects/2024-06-tegsense/">
+
+
+  <meta property="og:description" content="Battery-free photoplethysmograph (PPG) powered by body heat captured using flexible thermoelectric generators (TEGs).">
+
+
+
+  <meta property="og:image" content="https://me.anthonywertz.com/assets/projects/prj_tegsense.gif">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-06-28T16:47:42-04:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://me.anthonywertz.com/projects/2024-06-tegsense/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="A bit about Anthony Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    
+
+<link rel="stylesheet" href="/assets/css/bib.css">
+
+
+<link rel="stylesheet" href="/assets/css/tweaks.css" />
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          A bit about Anthony
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/"
+                
+                
+              >About me</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/activities/"
+                
+                
+              >Activities</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/projects/"
+                
+                
+              >Projects</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/cv/"
+                
+                
+              >CV</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="/assets/projects/prj_tegsense.gif"
+             alt="">
+      
+      <h3>Role</h3>
+      <p>Researcher</p>
+
+      
+    
+      
+      <h3>Responsibilities</h3>
+      <p>Designed custom hardware, firmware, and web front-end for energy harvesting and biometric sensing.</p>
+
+      
+    
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="TEG-powered, battery-free PPG sensing">
+    <meta itemprop="description" content="Battery-free photoplethysmograph (PPG) powered by body heat captured using flexible thermoelectric generators (TEGs).">
+    <meta itemprop="datePublished" content="2024-06-28T16:47:42-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://me.anthonywertz.com/projects/2024-06-tegsense/" itemprop="url">TEG-powered, battery-free PPG sensing
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Continuous biometric monitoring that doesn’t require frequent device or battery removal for recharging is of great interest to the medical community for improving patient care.
+In this work, we were very interested in testing how far we can push the boundaries of battery-free technologies, that is, those that fully operate using only energy harvested from their surroundings.
+Here we implemented a fully body-heat-powered device that periodically captures red and infrared reflectance waveforms and sends this data out over a Bluetooth Low Energy (BLE) link.
+See some highlights in the gallery below, and please read on.
+Note that this project is fully released open-source and the paper is open-access.
+The TEGSense hardware, firmware, and data logger can be found on <a href="https://github.com/TEGSense">GitHub</a>.
+In particular, <a href="https://github.com/TEGSense/ppgview">PPGView</a> might be especially useful to anyone looking for an easy way to configure and stream waveform data from a MAX30101 PPG sensor.</p>
+
+<figure>
+<div class="project-gallery third ">
+  
+  <div>
+    
+      <a href="/assets/projects/tegsense_summary.jpg">
+          <img src="/assets/projects/tegsense_summary.jpg" alt="Figure 1: A summary of the TEGSense project. See paper for details." />
+      </a>
+    
+    
+      <p>Figure 1: A summary of the TEGSense project. See paper for details.
+</p>
+    
+    </div>
+  
+  <div>
+    
+      <a href="/assets/projects/tegsense_teg.jpg">
+          <img src="/assets/projects/tegsense_teg.jpg" alt="Figure 2. Some views of the flexible thermoelectric devices. See paper for details." />
+      </a>
+    
+    
+      <p>Figure 2. Some views of the flexible thermoelectric devices. See paper for details.
+</p>
+    
+    </div>
+  
+  <div>
+    
+      <a href="/assets/projects/ss_tegsense.jpg">
+          <img src="/assets/projects/ss_tegsense.jpg" alt="Figure 3: [PPGView](https://github.com/TEGSense/ppgview), a web-based UI for real-time data streaming and sensor configuration for the MAX30101, designed for use with the [TEGSense](https://github.com/TEGSense) hardware." />
+      </a>
+    
+    
+      <p>Figure 3: <a href="https://github.com/TEGSense/ppgview">PPGView</a>, a web-based UI for real-time data streaming and sensor configuration for the MAX30101, designed for use with the <a href="https://github.com/TEGSense">TEGSense</a> hardware.
+</p>
+    
+    </div>
+  
+</div>
+</figure>
+
+<p>I had the great pleasure of collaborating with <a href="https://www.masonzadan.com/">Mason Zadan</a> to build a fully human-powered, battery-free, BLE-enabled photoplethysmograph (PPG).
+Mason has done some really excellent work designing and fabricating soft, flexible thermoelectric devices, which you can read about in his previous work <a class="citation" href="#zadan2022liquid">(Zadan et al., 2022)</a> or check out his website for some cool videos.
+The soft, compliant nature of the flexible TEGs make them better able to conform to the body and transduce heat to electricity.
+In our more recent work <a class="citation" href="#zadan2024tegsense">(Zadan et al., accepted, expected 2024)</a>, we used his improved devices as thermoelectric generators (TEGs) to fully power a biometric sensor.
+Figure 1 gives a high-level overview of the study, where a TEG array (a) is connected to a sensor board (b) to continuously recharge a capacitor bank (c) and collect PPG waveform data to send out over BLE (d).
+Some different views of the thermoelectric device are shown in figure 2, highlighting its flexibily.
+We capture this data and configure the MAX30101 sensor using the PPGView software, seen in figure 3.
+Below is a video explaining the study.</p>
+
+<figure>
+  <div class="project-gallery">
+    <div>
+      <video width="100%" height="auto" controls="" poster="https://masonzadan.com/images/TEH3.jpg">
+        <source src="https://masonzadan.com/images/SI Video 2.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p>Video 1. Supplemental video explaining the TEGSense study <a class="citation" href="#zadan2024tegsense">(Zadan et al., accepted, expected 2024)</a>. See [Mason's website](https://masonzadan.com/projects/).</p>
+    </div>
+  </div>
+</figure>
+
+<p>I designed a sensor board, which we call TEGSense, that steps up the low voltage output from a TEG (or TEG array, in this case) using an ultra low-voltage boost converter to charge a capacitor bank.
+Once the capacitors are fully charged to about 4.1V, a hysteretic switch enables the microcontroller and PPG sensor power supplies so they may start collecting waveform data to be shipped out over BLE.
+The hysteretic switch will disable the power supplies if the voltage ever drops below 3.3V to allow full recharging back to 4.1V.
+Otherwise, after sending a three second waveform, the device sleeps for a period of time while the capacitors recharge.
+Figure 4 shows a schematic of the electronics.</p>
+
+<figure>
+  <div class="project-gallery">
+    <div>
+      <a href="/assets/projects/tegsense_schematic_v4.jpg" class="image-popup"><img alt="TEGSense hardware schematic" src="/assets/projects/tegsense_schematic_v4.jpg" /></a>
+      <p>Figure 4. TEGSense rigid prototype schematic (v4).</p>
+    </div>
+  </div>
+</figure>
+
+<p>The board used for collection in the paper is an older revision.
+Figures 5-7 below show an updated design (the same shown in the schematic in figure 4) meant to be implemented as flexible printed circuit boards (PCBs) and a bit more compact.
+Further, FFC and other small connectors are replaced with slightly larger contacts compatible with direct ink write (DIW) printed circuits.
+Future iterations of the TEGSense device can be better integrated into wearables this way.</p>
+
+<figure>
+  <div class="project-gallery third">
+    <div>
+      <a href="/assets/projects/tegsense_flex.png" class="image-popup"><img src="/assets/projects/tegsense_flex.png" /></a>
+      <p>Figure 5. TEGSense v4 flex board for compatibility with printed conductors.</p>
+    </div>
+    <div>
+      <a href="/assets/projects/tegsense_flex_spo2.png" class="image-popup"><img src="/assets/projects/tegsense_flex_spo2.png" /></a>
+      <p>Figure 6. Flex SpO2 board.</p>
+    </div>
+    <div>
+      <a href="/assets/projects/tegsense_flex_cap.png" class="image-popup"><img src="/assets/projects/tegsense_flex_cap.png" /></a>
+      <p>Figure 7. Flex capacitor bank.</p>
+    </div>
+  </div>
+</figure>
+
+<p>For a more detailed look, please check out our paper <a class="citation" href="#zadan2024tegsense">(Zadan et al., accepted, expected 2024)</a> and our work on <a href="https://github.com/TEGSense">GitHub</a>.</p>
+
+<ol class="bibliography"><li><div class="text-justify">
+    <span id="zadan2022liquid">Zadan, M., Patel, D. K., Sabelhaus, A. P., Liao, J., <b>Wertz, A.</b>, Yao, L., &amp; Majidi, C. (2022). Liquid Crystal Elastomer with Integrated Soft Thermoelectrics for Shape Memory Actuation and Energy Harvesting. <i>Advanced Materials</i>, 2200857. https://doi.org/10.1002/adma.202200857</span>
+</div>
+<button class="button bibtex" onclick="toggleBibtexzadan2022liquid()">Bibtex</button>
+
+
+<a href="http://doi.org/10.1002/adma.202200857" target="_blank"><input class="button doi" type="button" value="doi" /></a>
+
+
+
+
+
+
+
+
+
+
+
+<div id="azadan2022liquid" style="display: none;">
+    <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">zadan2022liquid</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Liquid Crystal Elastomer with Integrated Soft Thermoelectrics for Shape Memory Actuation and Energy Harvesting}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Zadan, Mason and Patel, Dinesh K and Sabelhaus, Andrew P and Liao, Jiahe and Wertz, Anthony and Yao, Lining and Majidi, Carmel}</span><span class="p">,</span>
+  <span class="na">journal</span> <span class="p">=</span> <span class="s">{Advanced Materials}</span><span class="p">,</span>
+  <span class="na">pages</span> <span class="p">=</span> <span class="s">{2200857}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
+  <span class="na">publisher</span> <span class="p">=</span> <span class="s">{Wiley Online Library}</span><span class="p">,</span>
+  <span class="na">doi</span> <span class="p">=</span> <span class="s">{10.1002/adma.202200857}</span>
+<span class="p">}</span></code></pre></figure>
+</div>
+<script>
+    function toggleBibtexzadan2022liquid (parameter) {
+        var x = document.getElementById('azadan2022liquid');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+</script></li>
+<li><div class="text-justify">
+    <span id="zadan2024tegsense">Zadan, M., <b>Wertz, A.</b>, Shah, D., Patel, D. K., Zu, W., Han, Y., Gelorme, J., Mea, H. J., Yao, L., Malakooti, M. H., Ko, S. H., Kazem, N., &amp; Majidi, C. (accepted, expected 2024). <i>Stretchable Thermoelectric Generators for Self-Powered Wearable Health Monitoring</i>.</span>
+</div>
+<button class="button bibtex" onclick="toggleBibtexzadan2024tegsense()">Bibtex</button>
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="azadan2024tegsense" style="display: none;">
+    <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">zadan2024tegsense</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Stretchable Thermoelectric Generators for Self-Powered Wearable Health Monitoring}</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Zadan, Mason and Wertz, Anthony and Shah, Dylan and Patel, Dinesh K. and Zu, Wuzhou and Han, Youngshang and Gelorme, Jeff and Mea, Hing Jii and Yao, Lining and Malakooti, Mohammad H. and Ko, Seung Hwan and Kazem, Navid and Majidi, Carmel}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{accepted, expected 2024}</span><span class="p">,</span>
+  <span class="na">month</span> <span class="p">=</span> <span class="nv">jun</span>
+<span class="p">}</span></code></pre></figure>
+</div>
+<script>
+    function toggleBibtexzadan2024tegsense (parameter) {
+        var x = document.getElementById('azadan2024tegsense');
+        if (x.style.display === 'none') {
+            x.style.display = 'block';
+        } else {
+            x.style.display = 'none';
+        }
+    }
+</script></li></ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-28T16:47:42-04:00">28 June 2024</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=TEG-powered%2C+battery-free+PPG+sensing%20https%3A%2F%2Fme.anthonywertz.com%2Fprojects%2F2024-06-tegsense%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fme.anthonywertz.com%2Fprojects%2F2024-06-tegsense%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://me.anthonywertz.com/projects/2024-06-tegsense/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/projects/2024-05-ionm/" class="pagination--pager" title="Characterizing material degredation due to ion migration
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    <li><a href="mailto:me@mail.anthonywertz.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square"
+          aria-hidden="true"></i> Email</a></li>
+    
+    
+    
+    <li><a href="https://me.anthonywertz.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link"
+          aria-hidden="true"></i> Website</a></li>
+    
+    
+    
+    <li><a href="https://github.com/anthonytw" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+          aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="https://linkedin.com/in/anthonytw" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin"
+          aria-hidden="true"></i> LinkedIn</a></li>
+    
+    
+    
+
+    
+    <li><a
+        href="/feed.xml"><i
+          class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a
+    href="https://me.anthonywertz.com">Anthony Wertz</a>.</div>
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

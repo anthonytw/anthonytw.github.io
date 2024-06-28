@@ -31,7 +31,7 @@
 
 
 
-  <meta property="article:published_time" content="2024-06-28T10:07:48-04:00">
+  <meta property="article:published_time" content="2024-06-28T16:47:42-04:00">
 
 
 
@@ -176,7 +176,7 @@
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Soft manipulator control">
     <meta itemprop="description" content="Soft manipulator modeling, calibration and open-loop trajectory optimization.">
-    <meta itemprop="datePublished" content="2024-06-28T10:07:48-04:00">
+    <meta itemprop="datePublished" content="2024-06-28T16:47:42-04:00">
     
 
     <div class="page__inner-wrap">
@@ -236,12 +236,12 @@ This work explores these challenges by evaluating a simplified example of such a
   
   <div>
     
-      <a href="/assets/projects/trajopt_video.mp4">
-          <img src="/assets/projects/prj_trajopt.gif" alt="Figure 3: Published project video." />
+      <a href="/assets/projects/trajopt_teach_and_repeat.gif">
+          <img src="/assets/projects/trajopt_teach_and_repeat.gif" alt="Figure 3: Teach-and-repeat tracking." />
       </a>
     
     
-      <p>Figure 3: Published project video.
+      <p>Figure 3: Teach-and-repeat tracking.
 </p>
     
     </div>
@@ -281,7 +281,20 @@ You can see an example of our tracking performance in figure 2 which shows the t
 <p>We extended the work by adding in a “teach-and-repeat” component, where an operator would move the limb along a desired trajectory captured by the device sensors during the “teach” phase.
 The optimal open-loop controls were again learned to actuate the limb to track the desired trajectory.
 We validated the procedure in the hardware “repeat” phase, demonstrating a basic form of human-robot cooporation and training.
-This and other aspects of the work are summarized in the video published along with the article, linked to in figure 3.</p>
+Tracking results for the teach-and-repeat work are shown in figure 3.
+This and other aspects of the work are summarized in the video below published along with the article.</p>
+
+<figure>
+  <div class="project-gallery">
+    <div>
+      <video width="100%" height="auto" controls="">
+        <source src="/assets/projects/trajopt_video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <p>Video 1. Supplemental video explaining the study <a class="citation" href="#wertz2022trajectory">(Wertz et al., 2022)</a>.</p>
+    </div>
+  </div>
+</figure>
 
 <p>Read more about this work in our RoboSoft article <a class="citation" href="#wertz2022trajectory">(Wertz et al., 2022)</a>.
 In parallel, we evaluated the use of completely model-free inference, the work of Drew and Rohan Mehta <a class="citation" href="#sabelhaus2022situ">(Sabelhaus et al., 2022)</a> where we showed much of the inference can be learned directly without requiring an accurate model of the dynamics.
@@ -422,7 +435,7 @@ The work also contributed to future studies in safe supervision necessary to exe
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-28T10:07:48-04:00">28 June 2024</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-06-28T16:47:42-04:00">28 June 2024</time></p>
 
       </footer>
 

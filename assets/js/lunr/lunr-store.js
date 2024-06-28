@@ -58,4 +58,10 @@ var store = [{
         "tags": [],
         "url": "/projects/2024-05-ionm/",
         "teaser": "/assets/projects/ionm_trace_burn.gif"
+      },{
+        "title": "TEG-powered, battery-free PPG sensing",
+        "excerpt":"Continuous biometric monitoring that doesn’t require frequent device or battery removal for recharging is of great interest to the medical community for improving patient care. In this work, we were very interested in testing how far we can push the boundaries of battery-free technologies, that is, those that fully operate...","categories": [],
+        "tags": [],
+        "url": "/projects/2024-06-tegsense/",
+        "teaser": "/assets/projects/prj_tegsense.gif"
       }]
