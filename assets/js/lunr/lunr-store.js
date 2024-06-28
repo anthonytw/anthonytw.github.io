@@ -52,4 +52,10 @@ var store = [{
         "tags": [],
         "url": "/projects/2022-10-horton/",
         "teaser": "/assets/projects/prj_trajopt.gif"
+      },{
+        "title": "Characterizing material degredation due to ion migration",
+        "excerpt":"As high-power, high-voltage electronics become increasingly prevalent, in electric vehicle powertrains for example, understanding the degradation of materials in close proximity to high-voltage fields is crucial. This understudied scenario and associated failure modes are quickly moving under the spotlight as industries, especially automotive, transition to electric power, which requires high...","categories": [],
+        "tags": [],
+        "url": "/projects/2024-05-ionm/",
+        "teaser": "/assets/projects/ionm_trace_burn.gif"
       }]
