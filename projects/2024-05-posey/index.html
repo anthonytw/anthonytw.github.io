@@ -1,0 +1,392 @@
+<!doctype html>
+
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Posey: BLE-enabled motion tracking - A bit about Anthony</title>
+<meta name="description" content="A small form-factor IMU research platform designed for use in stroke rehabilitation and robotic feeding assistance.">
+
+
+  <meta name="author" content="Anthony Wertz">
+  
+  <meta property="article:author" content="Anthony Wertz">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="A bit about Anthony">
+<meta property="og:title" content="Posey: BLE-enabled motion tracking">
+<meta property="og:url" content="https://me.anthonywertz.com/projects/2024-05-posey/">
+
+
+  <meta property="og:description" content="A small form-factor IMU research platform designed for use in stroke rehabilitation and robotic feeding assistance.">
+
+
+
+  <meta property="og:image" content="https://me.anthonywertz.com/assets/projects/prj_posey.png">
+
+
+
+
+
+  <meta property="article:published_time" content="2024-07-02T15:01:40-04:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://me.anthonywertz.com/projects/2024-05-posey/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="A bit about Anthony Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    
+
+<link rel="stylesheet" href="/assets/css/bib.css">
+
+
+<link rel="stylesheet" href="/assets/css/tweaks.css" />
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          A bit about Anthony
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a
+                href="/"
+                
+                
+              >About me</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/activities/"
+                
+                
+              >Activities</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/projects/"
+                
+                
+              >Projects</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/cv/"
+                
+                
+              >CV</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+        <img src="/assets/projects/prj_posey.png"
+             alt="">
+      
+      <h3>Role</h3>
+      <p>Researcher</p>
+
+      
+    
+      
+      <h3>Responsibilities</h3>
+      <p>Designed custom hardware, firmware, and tools for collecting sensor data from small form-factor watch, ring, and waist sensors.</p>
+
+      
+    
+    
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Posey: BLE-enabled motion tracking">
+    <meta itemprop="description" content="A small form-factor IMU research platform designed for use in stroke rehabilitation and robotic feeding assistance.">
+    <meta itemprop="datePublished" content="2024-07-02T15:01:40-04:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="https://me.anthonywertz.com/projects/2024-05-posey/" itemprop="url">Posey: BLE-enabled motion tracking
+</a>
+          </h1>
+          
+
+
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Biomedical research could greatly benefit from compact, wearable, inertial measurement units (IMUs).
+However, commercial solutions are typically expensive and their operation is closed-source and inflexible.
+Building a DIY solution with off-the-shelf components means assembling relatively bulky breakout boards and microcontrollers to get a flexible solution to meet the needs of your research.
+The Posey project addresses this gap with a research-ready IMU sensor suite featuring multi-device operation, on-board logging, and Bluetooth Low Energy (BLE) connectivity.</p>
+
+<p>Here are some of the key features:</p>
+
+<ul>
+  <li>open-source hardware, firmware, and command-line tools;</li>
+  <li>three small form factors: ring, watch, and waist-mounted hub;</li>
+  <li>compact design (the smallest board is 25 x 12.5 mm);</li>
+  <li>BLE connectivity for wireless data transmission; and</li>
+  <li>on-board battery charging.</li>
+</ul>
+
+<p>See some highlights in the gallery below.
+The Posey hardware, firmware, and command line tools can be found on <a href="https://github.com/SML-Posey">GitHub</a>.</p>
+
+<figure>
+<div class="project-gallery third ">
+  
+  <div>
+    
+      <a href="/assets/projects/posey_suite.png">
+          <img src="/assets/projects/posey_suite.png" alt="Figure 1: Full Posey suite: waist-mounted hub (top), ring (bottom left), and watch (bottom right)." />
+      </a>
+    
+    
+      <p>Figure 1: Full Posey suite: waist-mounted hub (top), ring (bottom left), and watch (bottom right).
+</p>
+    
+    </div>
+  
+  <div>
+    
+      <a href="/assets/projects/posey_on_hand.png">
+          <img src="/assets/projects/posey_on_hand.png" alt="Figure 2: Posey ring placed on a finger for a sense of scale." />
+      </a>
+    
+    
+      <p>Figure 2: Posey ring placed on a finger for a sense of scale.
+</p>
+    
+    </div>
+  
+  <div>
+    
+      <a href="/assets/projects/posey_ring.png">
+          <img src="/assets/projects/posey_ring.png" alt="Figure 3. A zoomed photo of the Posey ring." />
+      </a>
+    
+    
+      <p>Figure 3. A zoomed photo of the Posey ring.
+</p>
+    
+    </div>
+  
+</div>
+</figure>
+
+<p>The Posey project was born out of a collaboration between CMU’s Soft Machines Lab and Virginia Tech’s Assistive Robotics Lab.
+Sensors would be used to continuously track stroke patients’ movements during therapy sessions and daily activities, allowing researchers to assess rehabilitation progress, identify weaknesses, and personalize treatment.
+The goal was to reduce recovery time and increase restored function.</p>
+
+<p>For this work, the primary objective was to design a compact, rechargable sensor that integrated a microcontroller, IMU, lithium-polymer battery, and Bluetooth antenna into a form factor small enough to sit comfortably on a finger.
+I aimed to build a device that was compact, precise, and long-lasting.
+This compact design, necessary for a finger-mounted device, also broadens its applicability to other research projects.
+One example is a new collaboration investigating the use of multiple head- and neck-worn motion trackers that provide data to a robotic feeding assistant, hopefully allowing researchers to enhance its performance.</p>
+
+<p>The development process was rife with challenges.
+Miniaturization posed a significant hurdle, requiring careful PCB layout and enclosure design to maintain radio performance within the confines of a finger-sized device.
+As I found out, there are many ways to cripple radio performance with uninformed design choices.
+Multi-device connectivity and BLE stack performance across operating systems were also challenges, and the primary drivers for the design of a hub unit.
+The hub connects to all peripheral sensors to log all sensor data to flash for download at after a study.
+It also logs Bluetooth signal strength for all peripherals to improve pose estimates and scans for iBeacon devices for coarse localization in the study area.
+The NORA-B126 module was chosen because it includes a power amplifier and low-noise amplifier on the RF front-end for more reliable BLE connections.</p>
+
+<p>Using the hub device for sensor aggregation was an improvement that enabled the use of a coded physical link layer to boost the signal integrity and supported the full BLE bandwidth, neither of which is typically possible on a commodity laptop.
+However, it requires sufficient storage capacity which becomes more challenging with more sensors, higher data rates, or longer study durations.
+To resolve these issues, I extended the hub firmware to instead work on a Nordic Thingy:53 (or similar platform), acting as a BLE to serial-over-USB bridge, resolving the OS- and device-dependent performance.</p>
+
+<p>Researchers interested in using Posey for their work can access the full hardware designs and all software and firmware in the <a href="https://github.com/SML-Posey">SML-Posey</a> GitHub repository.
+I welcome inquiries and would love to hear about new uses for Posey!</p>
+
+<ol class="bibliography"></ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2024-07-02T15:01:40-04:00">02 July 2024</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Posey%3A+BLE-enabled+motion+tracking%20https%3A%2F%2Fme.anthonywertz.com%2Fprojects%2F2024-05-posey%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fme.anthonywertz.com%2Fprojects%2F2024-05-posey%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://me.anthonywertz.com/projects/2024-05-posey/" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/projects/2024-05-ionm/" class="pagination--pager" title="Characterizing material degredation due to ion migration
+">Previous</a>
+    
+    
+      <a href="/projects/2024-06-tegsense/" class="pagination--pager" title="TEG-powered, battery-free PPG sensing
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+      
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+    
+    
+    <li><a href="mailto:me@mail.anthonywertz.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square"
+          aria-hidden="true"></i> Email</a></li>
+    
+    
+    
+    <li><a href="https://me.anthonywertz.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link"
+          aria-hidden="true"></i> Website</a></li>
+    
+    
+    
+    <li><a href="https://github.com/anthonytw" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github"
+          aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="https://linkedin.com/in/anthonytw" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin"
+          aria-hidden="true"></i> LinkedIn</a></li>
+    
+    
+    
+
+    
+    <li><a
+        href="/feed.xml"><i
+          class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2024 <a
+    href="https://me.anthonywertz.com">Anthony Wertz</a>.</div>
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

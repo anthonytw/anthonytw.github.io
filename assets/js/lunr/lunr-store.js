@@ -59,6 +59,12 @@ var store = [{
         "url": "/projects/2024-05-ionm/",
         "teaser": "/assets/projects/ionm_trace_burn.gif"
       },{
+        "title": "Posey: BLE-enabled motion tracking",
+        "excerpt":"Biomedical research could greatly benefit from compact, wearable, inertial measurement units (IMUs). However, commercial solutions are typically expensive and their operation is closed-source and inflexible. Building a DIY solution with off-the-shelf components means assembling relatively bulky breakout boards and microcontrollers to get a flexible solution to meet the needs of...","categories": [],
+        "tags": [],
+        "url": "/projects/2024-05-posey/",
+        "teaser": "/assets/projects/prj_posey.png"
+      },{
         "title": "TEG-powered, battery-free PPG sensing",
         "excerpt":"Continuous biometric monitoring that doesn’t require frequent device or battery removal for recharging is of great interest to the medical community for improving patient care. In this work, we were very interested in testing how far we can push the boundaries of battery-free technologies, that is, those that fully operate...","categories": [],
         "tags": [],
