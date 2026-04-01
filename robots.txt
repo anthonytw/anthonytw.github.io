@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://me.anthonywertz.com/sitemap-index.xml

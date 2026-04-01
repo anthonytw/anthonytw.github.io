@@ -1,0 +1,14 @@
+if(!window.__lightboxReady){let l=function(){const t=d()[i],e=t[n];document.getElementById("__lb-img").src=e.src,document.getElementById("__lb-img").alt=e.alt||"",document.getElementById("__lb-cap").textContent=e.alt||"";const s=t.length>1;document.getElementById("__lb-prev").style.display=s?"":"none",document.getElementById("__lb-next").style.display=s?"":"none",o.style.display="block",document.body.style.overflow="hidden"},r=function(){o.style.display="none",document.body.style.overflow=""};window.__lightboxReady=!0;let i=null,n=0;const o=document.createElement("div");o.id="__lb",o.style.cssText="display:none;position:fixed;inset:0;z-index:9999;",o.innerHTML=`
+      <div id="__lb-bg" style="position:absolute;inset:0;background:rgba(0,0,0,0.92);display:flex;align-items:center;justify-content:center;">
+        <button id="__lb-close" type="button" aria-label="Close lightbox"
+          style="position:fixed;top:1rem;right:1.25rem;font-size:2rem;color:#fff;background:none;border:none;cursor:pointer;line-height:1;padding:.25rem .5rem;opacity:.8;">×</button>
+        <button id="__lb-prev" type="button" aria-label="Previous image"
+          style="position:fixed;left:.75rem;top:50%;transform:translateY(-50%);font-size:3rem;color:#fff;background:none;border:none;cursor:pointer;padding:.5rem;opacity:.7;line-height:1;">‹</button>
+        <button id="__lb-next" type="button" aria-label="Next image"
+          style="position:fixed;right:.75rem;top:50%;transform:translateY(-50%);font-size:3rem;color:#fff;background:none;border:none;cursor:pointer;padding:.5rem;opacity:.7;line-height:1;">›</button>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:.75rem;max-width:90vw;max-height:90vh;">
+          <img id="__lb-img" src="" alt="" style="max-width:90vw;max-height:82vh;object-fit:contain;border-radius:4px;" />
+          <div id="__lb-cap" style="color:rgba(255,255,255,.7);font-size:.875rem;text-align:center;max-width:70ch;"></div>
+        </div>
+      </div>
+    `,document.body.appendChild(o);const d=()=>window.__galleries;window.__openGallery=(t,e)=>{i=t,n=e,l()},document.getElementById("__lb-close").addEventListener("click",r),document.getElementById("__lb-bg").addEventListener("click",t=>{t.target===document.getElementById("__lb-bg")&&r()}),document.getElementById("__lb-prev").addEventListener("click",t=>{t.stopPropagation();const e=d()[i].length;n=(n-1+e)%e,l()}),document.getElementById("__lb-next").addEventListener("click",t=>{t.stopPropagation();const e=d()[i].length;n=(n+1)%e,l()}),document.addEventListener("keydown",t=>{if(o.style.display!=="none"){if(t.key==="Escape")r();else if(t.key==="ArrowLeft"){const e=d()[i].length;n=(n-1+e)%e,l()}else if(t.key==="ArrowRight"){const e=d()[i].length;n=(n+1)%e,l()}}})}
