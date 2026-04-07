@@ -27,13 +27,15 @@
     const particles2 = document.getElementById('particles2');
     const particles3 = document.getElementById('particles3');
 
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     if (particles1) {
       particles1.style.cssText = `
       width: 1px;
       height: 1px;
       border-radius: 50%;
       box-shadow: ${particlesSmall};
-      animation: animStar 50s linear infinite;
+      ${reducedMotion ? '' : 'animation: animStar 50s linear infinite;'}
       `;
     }
 
@@ -43,7 +45,7 @@
       height: 1.5px;
       border-radius: 50%;
       box-shadow: ${particlesMedium};
-      animation: animateParticle 100s linear infinite;
+      ${reducedMotion ? '' : 'animation: animateParticle 100s linear infinite;'}
       `;
     }
 
@@ -53,7 +55,7 @@
       height: 2px;
       border-radius: 50%;
       box-shadow: ${particlesLarge};
-      animation: animateParticle 150s linear infinite;
+      ${reducedMotion ? '' : 'animation: animateParticle 150s linear infinite;'}
       `;
     }
 
