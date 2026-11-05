@@ -1,7 +1,3 @@
-// Loaded synchronously in <head>, so this runs before the body paints. The CSS
-// only hides .animate under .js; without scripts the content is just visible.
-document.documentElement.classList.add('js')
-
 function animate() {
   const animateElements = document.querySelectorAll('.animate')
 
